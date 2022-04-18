@@ -5,6 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { CarIconComponent } from '../car-icon/car-icon.component';
+import { VanIconComponent } from '../van-icon/van-icon.component';
+import { MotorcycleIconComponent } from '../motorcycle-icon/motorcycle-icon.component';
+import { TruckIconComponent } from '../truck-icon/truck-icon.component';
 
 
 @NgModule({
@@ -14,6 +18,12 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [
+    HomePage,
+    CarIconComponent,
+    VanIconComponent,
+    MotorcycleIconComponent,
+    TruckIconComponent
+  ]
 })
-export class HomePageModule {}
+export class HomePageModule { }
