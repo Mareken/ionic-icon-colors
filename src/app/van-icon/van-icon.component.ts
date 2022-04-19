@@ -6,13 +6,14 @@ import { darken } from 'polished';
   templateUrl: './van-icon.component.html',
   styleUrls: ['./van-icon.component.scss'],
 })
+
 export class VanIconComponent {
 
   constructor() { }
 
   shadeColor(amount: number): string {
     const styles = getComputedStyle(document.documentElement);
-    const currentColor = styles.getPropertyValue('--van-base-color');
+    const currentColor = styles.getPropertyValue(`--vehicle${item.id}-base-color`);
 
     return darken(amount, currentColor.trim());
   }

@@ -1,12 +1,12 @@
 <ion-content [fullscreen]="true">
   <div class="wrapper">
     <div id="container">
-      <app-car-icon></app-car-icon>
+      <app-car-icon [id]="id"></app-car-icon>
       <app-van-icon></app-van-icon>
       <app-motorcycle-icon></app-motorcycle-icon>
       <app-truck-icon></app-truck-icon>
     </div>
   
-    <ion-button (click)="changeColor('#FFC91F')">Mudar cor</ion-button>
+    <ion-button (click)="changeColor('#FFC91F', 1)">Mudar cor</ion-button>
   </div>
 </ion-content>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { darken } from 'polished';
 
 @Component({
@@ -8,11 +8,13 @@ import { darken } from 'polished';
 })
 
 export class CarIconComponent {
+  @Input() id: number;
+  
   constructor() {}
 
   shadeColor(amount: number): string {
     const styles = getComputedStyle(document.documentElement);
-    const currentColor = styles.getPropertyValue('--car-base-color');
+    const currentColor = styles.getPropertyValue(`--vehicle${this.id}-base-color`);
 
     return darken(amount, currentColor.trim());
   }
